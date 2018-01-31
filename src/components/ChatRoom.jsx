@@ -1,5 +1,9 @@
 import React from 'react';
 
+import TextField from 'material-ui/TextField';
+import Button from 'material-ui/Button';
+
+
 export default class ChatRoom extends React.Component {
 
   constructor(){
@@ -65,15 +69,15 @@ export default class ChatRoom extends React.Component {
         </ul>
 
         <form onSubmit={this.handleSubmit} >
-          <input 
+          <TextField 
             type="text"
             value={this.state.message}
             onChange={this.updateMessage}
           />
 
-          <button type='submit'>
+          <Button type="submit">
             Send
-          </button>
+          </Button>
         </form>
       </div>
     )
